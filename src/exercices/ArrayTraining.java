@@ -121,9 +121,14 @@ public class ArrayTraining {
      * @return array where all words are capitalized, eg: {"Sample", "Value"}
      */
     public String[] capitalize(String[] array) {
-        //TODO
-        char [] table = 
-        return array;
+        
+        String[] newString = new String [array.length];
+        for (int i = 0; i<array.length;i++){
+            char[] char_table = array[i].toCharArray();
+            char_table[0]=Character.toUpperCase(char_table[0]);
+            newString[i] = new String(char_table);
+        }
+        return newString;
     }
 
     /**
@@ -147,7 +152,7 @@ public class ArrayTraining {
     public int[] reverse(int[] array) {
         int [] newArray = new int [array.length];
         for (int i= 0; i<array.length;i++){
-            newArray[i] = array[array.length-i];
+            newArray[i] = array[array.length-i-1];
         }
         return newArray;
     }
